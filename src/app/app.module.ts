@@ -11,12 +11,15 @@ import { ErrorComponent } from './error/error.component';
 import { RouterModule } from '@angular/router';
 import {Routes } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ListActorsComponent } from './list-actors/list-actors.component';
+import { ConvertPipe } from './pipes/convert/convert.pipe';
 const appRoutes: Routes = [
 	{ path: "", component: ListMoviesComponent },
 	{ path: "addmovie", component: AddMovieComponent },
 	{ path: "deletemovie", component: DeleteMovieComponent },
 	{ path: "addactortomovie", component: AddActorToMovieComponent },
 	{ path: "listmovie", component: ListMoviesComponent },
+	{ path: "listactors", component: ListActorsComponent },
 
 	{ path: "**", component: ErrorComponent },
 ];
@@ -28,7 +31,9 @@ const appRoutes: Routes = [
     DeleteMovieComponent,
     ListMoviesComponent,
     AddActorToMovieComponent,
-    ErrorComponent
+    ErrorComponent,
+    ListActorsComponent,
+    ConvertPipe
   ],
   imports: [
     RouterModule,

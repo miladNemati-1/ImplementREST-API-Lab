@@ -1,3 +1,11 @@
-<label>Movie title: </label>
-<input #movieTitle class = "form-control" name="movieTitle" value="">
-<button type="submit" class="btn btn-primary" (click)="onDeleteMovie(movieTitle.value)">Delete Movie</button>
+<div>
+	<label>Movie title: </label>
+	<input #movieTitle class="form-control" name="movieTitle" value="" />
+	<button
+		type="submit"
+		class="btn btn-primary"
+		(click)="onDeleteMovie(movieTitle.value)"
+	>
+		Delete Movie
+	</button>
+</div>
