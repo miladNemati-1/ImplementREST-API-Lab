@@ -5,14 +5,14 @@ const mongoose = require('mongoose');
 const app = express();
 let path = require("path");
 
-app.use("/", express.static(path.join(__dirname, "dist/WEEK10SPA")));
+app.use("/", express.static(path.join(__dirname, "dist/movieAng")));
 const actors = require('./routers/actor');
 const movies = require('./routers/movie');
 
 
 
 
-app.listen(8081);
+app.listen(8080);
 
 
 app.use(express.json());

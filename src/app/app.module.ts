@@ -15,7 +15,7 @@ const appRoutes: Routes = [
 	{ path: "", component: ListMoviesComponent },
 	{ path: "addmovie", component: AddMovieComponent },
 	{ path: "deletemovie", component: DeleteMovieComponent },
-	{ path: "addactortomovie", component: ListMoviesComponent },
+	{ path: "addactortomovie", component: AddActorToMovieComponent },
 	{ path: "listmovie", component: ListMoviesComponent },
 
 	{ path: "**", component: ErrorComponent },

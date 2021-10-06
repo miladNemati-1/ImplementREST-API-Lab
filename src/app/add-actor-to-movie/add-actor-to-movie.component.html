@@ -1,6 +1,7 @@
+<div class="container">
 <label>Movie</label>
 <select #movie placeholder="movie" class= "form-select"multiple>
-  <option  *ngFor="let movie of moviesDB" name="movie" [value]="movie._id">{{ movie.title }}</option>
+  <option  *ngFor="let movie of moviesDB" name="movie" value="movie._id">{{ movie.title }}</option>
 </select>
 
 <label>Actor</label>
@@ -10,3 +11,4 @@
 
 
 <button type="submit" class="btn btn-primary"(click)="onAddActor(movie.value, actor.value)">Add actor to movie</button>
+</div>
