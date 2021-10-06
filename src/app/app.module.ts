@@ -13,6 +13,8 @@ import {Routes } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ListActorsComponent } from './list-actors/list-actors.component';
 import { ConvertPipe } from './pipes/convert/convert.pipe';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 const appRoutes: Routes = [
 	{ path: "", component: ListMoviesComponent },
 	{ path: "addmovie", component: AddMovieComponent },
@@ -42,6 +44,12 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule,
     NgbModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
     
   ],
   providers: [],

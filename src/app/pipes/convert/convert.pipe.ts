@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ConvertPipe implements PipeTransform {
 
   transform(value: any, ...args: unknown[]): unknown {
-    return 2021- value;
+    return new Date().getFullYear() - value;
   }
 
 }
