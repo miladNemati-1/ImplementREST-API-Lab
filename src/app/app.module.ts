@@ -12,13 +12,13 @@ import { RouterModule } from '@angular/router';
 import {Routes } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 const appRoutes: Routes = [
-  
-  { path: "addmovie", component: AddMovieComponent },
-  { path: "deletemovie", component: DeleteMovieComponent },
-  { path: "addactortomovie", component: ListMoviesComponent },
-  { path: "listmovies", component: ListMoviesComponent },
-  
-  { path: "**", component: ErrorComponent},
+	{ path: "", component: ListMoviesComponent },
+	{ path: "addmovie", component: AddMovieComponent },
+	{ path: "deletemovie", component: DeleteMovieComponent },
+	{ path: "addactortomovie", component: ListMoviesComponent },
+	{ path: "listmovie", component: ListMoviesComponent },
+
+	{ path: "**", component: ErrorComponent },
 ];
 
 @NgModule({
